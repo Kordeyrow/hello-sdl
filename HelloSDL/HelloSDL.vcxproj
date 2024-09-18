@@ -132,7 +132,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="HelloSDL.cpp" />
+    <ClCompile Include="Lesson01-Setup&amp;Windowing.cpp" />
+    <ClCompile Include="Lesson02-Bitmaps.cpp" />
+    <ClCompile Include="Lesson03-Events.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
