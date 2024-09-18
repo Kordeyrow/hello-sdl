@@ -16,10 +16,8 @@ namespace Lesson03
 	static SDL_Surface* image1;
 	static SDL_Surface* image2;
 
-	//int main_disabled(int argc, char** args) {
 	static int main(int argc, char** args) 
 	{
-
 		if (!init()) return 1;
 
 		if (!load()) return 1;
@@ -35,7 +33,7 @@ namespace Lesson03
 
 	bool loop() 
 	{
-		static bool renderImage2;
+		bool renderImage2{};
 		SDL_Event e;
 
 		// Blit image to entire window
@@ -43,24 +41,24 @@ namespace Lesson03
 
 		while (SDL_PollEvent(&e) != 0) {
 			switch (e.type) {
-			case SDL_QUIT:
-				return false;
-			case SDL_KEYDOWN:
-				renderImage2 = true;
-				break;
-			case SDL_KEYUP:
-				renderImage2 = false;
-				// can also test individual keys, modifier flags, etc, etc.
-				break;
-			case SDL_MOUSEMOTION:
-				// etc.
-				break;
+				case SDL_QUIT:
+					return false;
+				case SDL_KEYDOWN:
+					renderImage2 = true;
+					break;
+				case SDL_KEYUP:
+					renderImage2 = false;
+					// can also test individual keys, modifier flags, etc, etc.
+					break;
+				case SDL_MOUSEMOTION:
+					renderImage2 = true;
+					break;
 			}
 		}
 
 		if (renderImage2) {
 			// Blit image to scaled portion of window
-			SDL_Rect dest;
+			SDL_Rect dest{};
 			dest.x = 160;
 			dest.y = 120;
 			dest.w = 320;
@@ -77,7 +75,7 @@ namespace Lesson03
 	bool load() 
 	{
 		// Temporary surfaces to load images into
-			// This should use only 1 temp surface, but for conciseness we use two
+		// This should use only 1 temp surface, but for conciseness we use two
 		SDL_Surface* temp1, * temp2;
 
 		// Load images

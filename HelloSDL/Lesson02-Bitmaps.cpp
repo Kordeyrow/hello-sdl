@@ -15,10 +15,8 @@ namespace Lesson02
 	static SDL_Surface* image1;
 	static SDL_Surface* image2;
 
-	//int main_disabled(int argc, char** args) {
 	static int main(int argc, char** args) 
 	{
-
 		if (!init()) return 1;
 
 		if (!load()) return 1;
