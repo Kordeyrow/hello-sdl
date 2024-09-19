@@ -61,7 +61,7 @@ namespace Lesson02
 	bool load() 
 	{
 		// Temporary surfaces to load images into
-			// This should use only 1 temp surface, but for conciseness we use two
+		// This should use only 1 temp surface, but for conciseness we use two
 		SDL_Surface* temp1, * temp2;
 
 		// Load images

@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lesson01-Setup&amp;Windowing.cpp" />
-    <ClCompile Include="Lesson02-Bitmaps.cpp" />
-    <ClCompile Include="Lesson03-Events.cpp" />
-    <ClCompile Include="Lesson04-GeometryRendering.cpp">
+    <ClCompile Include="Lesson01_Setup&amp;Windowing.cpp" />
+    <ClCompile Include="Lesson02_Bitmaps.cpp" />
+    <ClCompile Include="Lesson03_Events.cpp" />
+    <ClCompile Include="Lesson04_GeometryRendering.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Lesson05_Textures%28+LookAt%29.cpp" />
+    <ClCompile Include="Lesson05_Textures.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
